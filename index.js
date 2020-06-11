@@ -120,10 +120,17 @@ console.log(getLastReview(reviews));
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+//  function getReviewByRating(objArr, rated) {
+//     const ratedReviews = [];
+//     for(let i = 0; i < objArr.length; i++){
+//       if(objArr[i].includes(rated)){
+//         ratedReviews.push(objArr[i]);
+//       }
+//     }
+//     return ratedReviews;
+//   }
 
+// getReviewByRating(reviews, 4);  
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -165,3 +172,15 @@ function carMaker(/* code here */) {
     /* code here */
     
 }
+
+
+
+
+
+
+
+const testArr = [{words: "lorem", more: "ipsum", final: "docet"},
+  {words: "loremre", more: "ipsumre", final: "docetre"},
+  {words: "loremwerw", more: "ipsumwerw", final: "docetwer"}];
+
+console.log(`If I want that array's first index's "more" section I would do this ${testArr[0].more}`);
