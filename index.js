@@ -174,20 +174,28 @@ The returned object should have the following characteristics:
          (2) returns the updated value of the `odometer`.
 */
 
+let newCar = {};
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odoReading) {
+  newCar = {
+    odometer: odoReading,
+    drive(distance){
+      return this.odometer += distance;
+    }
+  }
+  return newCar;
 }
 
+console.log(carMaker(100));
+console.log(newCar.drive(50));
+console.log(newCar.drive(200));
 
 
 
 
 
+// const testArr = [{words: "lorem", more: "ipsum", final: "docet"},
+//   {words: "loremre", more: "ipsumre", final: "docetre"},
+//   {words: "loremwerw", more: "ipsumwerw", final: "docetwer"}];
 
-const testArr = [{words: "lorem", more: "ipsum", final: "docet"},
-  {words: "loremre", more: "ipsumre", final: "docetre"},
-  {words: "loremwerw", more: "ipsumwerw", final: "docetwer"}];
-
-console.log(`If I want that array's first index's "more" section I would do this ${testArr[0].more}`);
+// console.log(`If I want that array's first index's "more" section I would do this ${testArr[0].more}`);
